@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/a/researches/add_doctor}" method="post">
+		<p>id lekarza</p>
+		<input type="number"name="id" />
+		<p>nazwa badnia</p>
+		<input type="text" name="r_name" />
+		<p>wyslij</p>
+		<input type="submit" value="wyslij" />
+	</form>
+</body>
+</html>

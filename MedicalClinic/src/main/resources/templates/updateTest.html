@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Registration form</title>
+</head>
+<body>
+	<form method="post" th:action="@{/create_test}">
+		<p>order number</p>
+		<input type="number" name="orderNumber" placeholder="w"/> <br>
+		<p>wynik badania</p>
+		<input type="text" name="result" placeholder="w"/> <br>
+		<p><input type="submit" value="wyslij" /></p>
+	</form>
+</body>
+</html>

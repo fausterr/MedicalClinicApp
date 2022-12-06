@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Informacje o Tobie:</h2>
+	<br>
+	<h3>Login</h3>
+	<p th:text="${user.login}">Login</p>
+	<h3>Imię</h3>
+	<p th:text="${user.firstName}"></p>
+	<h3>Nazwisko</h3>
+	<p th:text="${user.lastName}"></p>
+	<br>
+	<h3><a th:href="@{/profile/active_tests}">Twoje aktywne testy</a></h3>
+	<br>
+	<h3><a th:href="@{/profile/active_tests}">Wyswietl historie testow</a></h3>
+	<br>
+	<h3><a th:href="@{/tests}">Pobierz wyniki swoich testow</a></h3>
+</body>
+</html>

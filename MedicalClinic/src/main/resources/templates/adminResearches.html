@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Available Researches</title>
+</head>
+<body>		
+	<table width="50%" border="1"> 
+		<tr>
+			<th>Id</th>
+			<th>Opis</th>
+			<th>Edycja</th>
+			<th>Usun projekt</th>
+		</tr>
+		<tr th:each="project: ${projects}" th:object="${project}">
+			<td th:text="${project.id}"></td>
+			<td th:text="*{description}"></td>
+			<td><a th:href="@{/a/research/{id}(id = ${project.id})}">kliknij by edytowac</a></td>
+			<td><a th:href="@{/a/delete_research/{id}(id = ${project.id})}">kliknij by usunac</a></td>
+		</tr>
+	</table>	
+	<br>
+	<a th:href="@{/}">Przejdz do strony glownej</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Registration form</title>
+</head>
+<body>
+	<form method="post" th:action="@{/create_test}">
+		<p>order number</p>
+		<input th:field="${test.orderNumber}" placeholder="w"/> <br>
+		<p>test name</p>
+		<input th:field="${test.testName}" placeholder="w"/> <br>
+		<p>measuring span</p>
+		<input th:field="${test.measuringSpan}" placeholder="w"/> <br>
+		<p>pesel</p>
+		<input th:field="${pesel.pesel}" placeholder="w"/> <br>
+		<p><input type="submit" value="Register" /></p>
+	</form>
+</body>
+</html>

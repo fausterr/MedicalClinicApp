@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		<table width="50%" border="1"> 
+		<tr>
+			<th>Numer zlecenia</th>
+			<th>Nazwa badania</th>
+			<th>Wartosci dopuszczalne</th>
+			<th>Wynik</th>
+			<th>Data wykonania testu</th>
+		</tr>
+		<tr th:each="test: ${tests}" th:object="${test}">
+			<td th:text="*{orderNumber}"></td>
+			<td th:text="*{testName}"></td>
+			<td th:text="*{measuringSpan}"></td>
+			<td th:text="*{result}"></td>
+			<td th:text="*{testDate}"></td>
+		</tr>
+	</table>
+</body>
+</html>

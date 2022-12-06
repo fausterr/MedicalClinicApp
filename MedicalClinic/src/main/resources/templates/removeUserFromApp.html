@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/sa/remove_user}" method="post">
+		<input type="text" name="login" th:placeholder="Login"/>
+		<input type="submit" value="wyslij" />
+	</form>
+</body>
+</html>

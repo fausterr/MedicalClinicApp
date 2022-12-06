@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>	
+	<form action="#" method="post" th:action="@{/permission_form}" th:object="${permissionForm}">
+		<p>Pesel</p>
+		<p th:errors="*{pesel}">pesel errors</p>
+		<input th:field="*{pesel}" placeholder="Login"/> <br>
+		<p>First name</p>
+		<p th:errors="*{firstName}">first name errors</p>
+		<input th:field="*{firstName}" placeholder="Hasło"/> <br>
+		<p>Last name</p>
+		<p th:errors="*{lastName}">last name errors</p>
+		<input th:field="*{lastName}" placeholder=""/> <br>
+		<p>Phone number</p>
+		<p th:errors="*{phoneNumber}">phoneNumber errors</p>
+		<input th:field="*{phoneNumber}" placeholder="Imię"/> <br>
+		<p>Age</p>
+		<p th:errors="*{age}">age errors</p>
+		<input th:field="*{age}" placeholder="Specjalizacja"/> <br>
+		<p>City</p>
+		<p th:errors="*{city}">city errors</p>
+		<input th:field="*{city}" placeholder="Numer telefonu"/> <br>
+		<p>Address</p>
+		<p th:errors="*{address}">address errors</p>
+		<input th:field="*{address}" placeholder="Pokój"/> <br>
+		<br>
+		<input type="submit" value="Wyślij zgodę" />
+	</form>
+</body>
+</html>

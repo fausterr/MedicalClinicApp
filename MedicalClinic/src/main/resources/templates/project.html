@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Available Researches</title>
+</head>
+<body>		
+	<p th:text="${project.id}">Id</p>
+	<p th:text="${project.description}">Opis</p>
+	<p th:text="${project.participants}">Ilosc uczestnikow</p>	
+	
+	<form method="post" th:action="@{/a/research/update}" th:object="${project}">
+		<input type="hidden" th:field="*{id}" placeholder=""/>
+		<p>Nazwa badania</p>
+		<input th:field="*{name}" placeholder=""/> 
+		<p>Opis badania</p>
+		<input th:field="*{description}" placeholder=""/> 
+		<p>Liczba uczestników</p>
+		<input th:field="*{participants}" placeholder=""/> 
+		<input type="submit" value="Wyślij" />
+	</form>
+	<br>
+	<a th:href="@{/}">Przejdz do strony glownej</a>
+</body>
+</html>

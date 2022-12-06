@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Available Researches</title>
+</head>
+<body>		
+	<table width="50%" border="1"> 
+		<tr>
+			<th>Id</th>
+			<th>Nazwa</th>
+			<th>Opis</th>
+		</tr>
+		<tr th:each="project: ${projects}" th:object="${project}">
+			<td th:text="*{id}"></td>
+			<td th:text="*{name}"></td>
+			<td th:text="*{description}"></td>
+			<td><a th:href="@{/research/{id}(id = ${project.id})}">ZAPISZ SIE</a></td>
+		</tr>
+	</table>
+	<br>
+	<a th:href="@{/}">Przejdz do strony glownej</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>		
+	<a th:href="@{/login_form}">Login</a>
+	<br>
+	<a th:href="@{/register}">Register for user</a>
+	<br>
+	<a th:href="@{/profile}">Przejdz do profilu</a>
+	<br>	
+	<p th:if="${isAdmin}">
+		<a th:href="@{/a}">Przejdz do profilu admina</a>
+	</p>
+	<br>
+	<p th:if="${isSuperAdmin}">
+		<a th:href="@{/a}">Przejdz do profilu admina</a>	
+		<a th:href="@{/sa}">Przejdz do profilu superadmina</a>	
+	</p>
+	<br>
+	<a th:href="@{/medical_researches}">Sprawdz liste otwartych projektow badawczych </a>
+</body>
+</html>

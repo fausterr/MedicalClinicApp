@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>	
+	<h1>Registration form</h1>
+	<form action="#" method="post" th:action="@{/a/create_research}" th:object="${research}">
+		<p>description</p>
+		<input th:field="*{description}" placeholder="description" /><br />
+		<p>participants</p>
+		<input th:field="*{participants}" placeholder="participants" /><br />
+		<br>
+		<input type="submit" value="Register" />
+	</form>
+</body>
+</html>

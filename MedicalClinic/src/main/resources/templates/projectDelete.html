@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Available Researches</title>
+</head>
+<body>		
+	<p th:text="${project.id}">Id</p>
+	<p th:text="${project.description}">Opis</p>
+	<p th:text="${project.participants}">Ilosc uczestnikow</p>	
+	
+	<h2>Czy na pewno chcesz usunac projekt?</h2>
+	
+	<form method="post" th:action="@{/a/research/update}" th:object="${project}">
+		<input type="hidden" th:field="*{id}" placeholder=""/>
+		<input type="submit" value="Usuń" />
+	</form>
+	<br>
+	<a th:href="@{/}">Przejdz do strony glownej</a>
+</body>
+</html>

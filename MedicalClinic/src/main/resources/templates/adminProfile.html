@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>	
+	<a th:href="@{/a/create_research}">Stworz nowy projekt badawczy</a>
+	<br>
+	<a th:href="@{/a/researches}">Wyswietl wszystkie projekty badawcze</a>
+	<br>
+	<a th:href="@{/a/researches/remove_user}">Usuń pacjenta z projektu</a>
+	<br>
+	<a th:href="@{/a/researches/add_doctor}">Dodaj lekarza do projektu</a>
+	<br>
+	<a th:href="@{/a/create_test}">Wykonaj zlecenie testu pacjenta</a>
+	<br>
+	<a th:href="@{/a/updateTest}">Wpisz wynik testu pacjenta</a>
+</body>
+</html>
